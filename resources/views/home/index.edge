@@ -2,8 +2,60 @@
 
 @section('content')
 
+<div class="card">
+    <div class="card-header flex-wrap border-0 pt-6 pb-0">
+        <div class="card-title">
+            <h3 class="card-label">Enter VIN
+            <span class="d-block text-muted pt-2 font-size-sm">To get vehicle information please enter your vehicle identification number (VIN)</span></h3>
+        </div>
+    </div>
+    <div class="card-body">
+        <!--begin: Search Form-->
+        <div class="mb-7">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-xl-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 my-2 my-md-0">
+                            <div class="input-icon">
+                                <input type="text" class="form-control" placeholder="Search" id="query"/>
+                                <span>
+                                    <i class="flaticon2-search-1 text-muted"></i>
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
+                    <a class="btn btn-light-primary px-6 font-weight-bold" id="search">Search</a>
+                </div>
+            </div>
+        </div>
+        <!--end: Search Form-->
+    </div>
+    <div id="vehicle-information" class="card-body d-none">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="year" class="pl-1">Year:</label>
+                <input type="text" readonly class="form-control" id="year" value="">
+            </div>
+            <div class="col-md-3">
+                <label for="make" class="pl-1">Make:</label>
+                <input type="text" readonly class="form-control" id="make" value="">
+            </div>
+            <div class="col-md-3">
+                <label for="model" class="pl-1">Model:</label>
+                <input type="text" readonly class="form-control" id="model" value="">
+            </div>
+        </div>
+    </div>
+</div>
 
-{{--  <p>Olá <strong>{{ auth.user.name }}!</strong> Escolha ao lado uma opção.</p>  --}}
+@endsection
 
+@section('scripts')
+
+
+<script src="/assets/js/vin.js"></script>
 
 @endsection

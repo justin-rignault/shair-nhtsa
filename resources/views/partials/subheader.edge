@@ -5,11 +5,6 @@
 			<!--begin::Page Title-->
 			<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">{{{ page_title || '' }}}</h5>
 			<!--end::Page Title-->
-			<!--begin::Actions-->
-			<!-- <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-			<span class="text-muted font-weight-bold mr-4">#XRS-45670</span>
-			<a href="#" class="btn btn-light-warning font-weight-bolder btn-sm">Add New</a> -->
-			<!--end::Actions-->
 			@if( breadcrumb )
 				<!--begin::Breadcrumb-->
 				<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
@@ -17,7 +12,6 @@
 					@each(bc in breadcrumb)
 						<li class="breadcrumb-item">
 							<a href="{{ route(bc.route, bc.routeParams) }}" class="text-muted">{{ bc.text }}</a>
-							{{--  <a href="{{ route(bc.route) }}" class="text-muted">{{ bc.text }}</a>  --}}
 						</li>
 					@endeach
 				</ul>
@@ -25,20 +19,5 @@
 			@endif
 		</div>
 		<!--end::Info-->
-		<!--begin::Toolbar-->
-		<div class="d-flex align-items-center">
-			<!--begin::Actions-->
-			<!-- <a href="#" class="btn btn-clean btn-sm font-weight-bold font-size-base mr-1">Today</a>
-			<a href="#" class="btn btn-clean btn-sm font-weight-bold font-size-base mr-1">Month</a>
-			<a href="#" class="btn btn-clean btn-sm font-weight-bold font-size-base mr-1">Year</a> -->
-			<!--end::Actions-->
-			<!--begin::Daterange-->
-			<!-- <a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" id="kt_dashboard_daterangepicker" data-toggle="tooltip" title="Select dashboard daterange" data-placement="left">
-				<span class="text-muted font-size-base font-weight-bold mr-2" id="kt_dashboard_daterangepicker_title">Today</span>
-				<span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date">Aug 16</span>
-			</a> -->
-			<!--end::Daterange-->
-		</div>
-		<!--end::Toolbar-->
 	</div>
 </div>
