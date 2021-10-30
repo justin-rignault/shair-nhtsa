@@ -6,6 +6,7 @@ const searchVIN = e => {
     
     const vin = searchQuery
 
+    $('#spinner').removeClass('d-none')
     fetch(`/api/vin/${vin}`)
         .then( response => response.json())
         .then( data => {
@@ -13,6 +14,7 @@ const searchVIN = e => {
             $('#year').val(data.year)
             $('#make').val(data.make)
             $('#model').val(data.model)
+            $('#spinner').addClass('d-none')
         })
         .catch( error => {
             console.error(error)
