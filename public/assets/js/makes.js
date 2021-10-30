@@ -14,8 +14,7 @@ const AjaxTable = function() {
                 source: {
                     read: {
                         url: '/api/makes/list',
-                        // sample custom headers
-                        headers: { 'x-csrf-token': csrfToken },
+                        method: 'GET',
                         map: function(raw) {
                             // sample data mapping
                             let dataSet = raw
@@ -39,7 +38,7 @@ const AjaxTable = function() {
             },
 
             // column sorting
-            sortable: true,
+            sortable: false,
 
             pagination: true,
 
@@ -50,19 +49,15 @@ const AjaxTable = function() {
 
             // columns definition
             columns: [{
-                field: 'id',
+                field: 'Make_ID',
                 title: '#',
-                sortable: 'asc',
-                width: 40,
+                // width: 40,
                 type: 'number',
                 selector: false,
                 textAlign: 'center',
             }, {
-                field: 'title',
-                title: 'título',
-            }, {
-                field: 'room',
-                title: 'área',
+                field: 'Make_Name',
+                title: 'make',
             }],
         })
     }

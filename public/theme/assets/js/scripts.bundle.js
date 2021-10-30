@@ -8807,7 +8807,7 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
 							select: 'Select page size',
 							all: 'all',
 						},
-						info: 'Mostrando {{start}} - {{end}} de {{total}}',
+						info: 'Showing {{start}} - {{end}} of {{total}}',
 					},
 				},
 			},

@@ -27,6 +27,6 @@ Route.get('/makes', 'MakeController.index').as('make')
 Route.group( () => {
 
     Route.get('vin/:number', 'VinController.search')
-    Route.post('makes/list', 'MakeController.list')
+    Route.get('makes/list', 'MakeController.list')
 
 }).prefix('api')
