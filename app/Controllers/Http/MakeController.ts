@@ -14,14 +14,15 @@ export default class MakeController {
             const axiosResponse = await axios.get(`https://vpic.nhtsa.dot.gov/api/vehicles/GetAllMakes?format=json`)
             let results = axiosResponse.data.Results
 
-            const searchQuery = request.input('query').generalSearch
+            const searchQuery = request.input('query')?.generalSearch
             if(searchQuery) {
                 results = results.filter( element => element.Make_Name.includes(searchQuery.toUpperCase()))
             }
 
 			return response.status(200).json(results)	
         } catch (error) {
-            
+            console.error(error.messages || error)
+            return response.status(500).json({ message: 'An unexpected error has occured. Please try again.' })            
         }
         
     }
