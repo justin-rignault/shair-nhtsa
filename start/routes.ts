@@ -22,10 +22,11 @@ import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', ({ view }) => view.render('welcome')).as('home')
 Route.get('/vin', 'VinController.index').as('vin')
-Route.get('/makes', 'MakeController.index')
+Route.get('/makes', 'MakeController.index').as('make')
 
 Route.group( () => {
 
     Route.get('vin/:number', 'VinController.search')
+    Route.post('makes/list', 'MakeController.list')
 
 }).prefix('api')

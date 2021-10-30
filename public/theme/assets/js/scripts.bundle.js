@@ -8791,8 +8791,8 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
 		// By default the stirngs will be in the plugin source and here can override it
 		translate: {
 			records: {
-				processing: 'Aguarde por favor...',
-				noRecords: 'Nenhum item encontrado',
+				processing: 'Please wait..',
+				noRecords: 'No records found',
 			},
 			toolbar: {
 				pagination: {
