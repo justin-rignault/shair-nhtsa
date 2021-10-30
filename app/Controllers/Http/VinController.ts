@@ -2,7 +2,7 @@ import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 const axios = require('axios')
 
 export default class VinController {
-    async index({ view }: HttpContextContract) {
+    index({ view }: HttpContextContract) {
         const page_title = `Search By VIN`
 
         return view.render('vin/index', { page_title })

@@ -2,7 +2,7 @@ import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 const axios = require('axios')
 
 export default class MakeController {
-    async index({ view }: HttpContextContract) {
+    index({ view }: HttpContextContract) {
         const page_title = `Makes`
 
         return view.render('make/index', { page_title })

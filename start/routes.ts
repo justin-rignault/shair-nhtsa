@@ -20,9 +20,10 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', ({ view }) => view.render('welcome')).as('home')
-Route.get('/vin', 'VinController.index').as('vin')
-Route.get('/makes', 'MakeController.index').as('make')
+Route.get('', ({ view }) => view.render('welcome')).as('home')
+Route.get('vin', 'VinController.index').as('vin')
+Route.get('makes', 'MakeController.index').as('make')
+Route.get('makes/:make', 'ModelController.index')
 
 Route.group( () => {
 
