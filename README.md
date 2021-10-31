@@ -13,7 +13,7 @@ indicates route parameters and should not be included in the url.
 
 **GET** /api/makes/list
 
-**GET** /api.model/{make}/{year}
+**GET** /api/model/{make}/{year}
 
 **GET** /api/vin/{vin-number}
 
