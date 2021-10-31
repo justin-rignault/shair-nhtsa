@@ -1,10 +1,10 @@
 # shair-nhtsa
 
-https://shair-nhtsa.herokuapp.com
-
-- - -
+Project link: https://shair-nhtsa.herokuapp.com
 
 The url above includes a responsive UI as well as the API routes.
+
+- - -
 
 ## API Routes
 ```{}```
