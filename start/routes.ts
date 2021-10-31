@@ -29,5 +29,6 @@ Route.group( () => {
 
     Route.get('vin/:number', 'VinController.search')
     Route.get('makes/list', 'MakeController.list')
+    Route.get('model/:make/:year', 'ModelController.search')
 
 }).prefix('api')

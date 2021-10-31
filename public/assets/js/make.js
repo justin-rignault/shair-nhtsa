@@ -72,7 +72,7 @@ const AjaxTable = function() {
                 autoHide: false,
                 template: function(row) {
                     return '\
-                        <a href="/makes/'+ row.Make_Name +'" class="btn btn-sm btn-clean btn-icon mr-2" title="Listar models">\
+                        <a href="/makes/'+ row.Make_Name +'" class="btn btn-sm btn-clean btn-icon mr-2" title="List models">\
                             <span class="svg-icon svg-icon-md">\
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-icon">\
                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\
