@@ -67,7 +67,7 @@ const AjaxTable = function() {
                 field: 'Actions',
                 title: 'actions',
                 sortable: false,
-                width: 150,
+                width: 70,
                 overflow: 'visible',
                 autoHide: false,
                 template: function(row) {
