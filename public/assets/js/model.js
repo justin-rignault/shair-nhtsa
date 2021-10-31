@@ -1,8 +1,15 @@
 'use strict'
 
 const removeInvalidClass = ev => {
-    if(ev.target.value) return ev.target.classList.remove('is-invalid')
-    return ev.target.classList.add('is-invalid')
+    ev.preventDefault()
+    if(!ev.target.value) return ev.target.classList.add('is-invalid')
+
+    submitForm(ev)
+    return ev.target.classList.remove('is-invalid')
+}
+
+const submitForm = ev => {
+    if(ev.code === 'Enter') getModels()
 }
 
 const getModels = () => {
@@ -19,9 +26,12 @@ const getModels = () => {
 
             const modelsDiv = $('[data-models]')
             modelsDiv.empty()
-            data.forEach( model => {
-                modelsDiv.append(`<input readonly type="text" class="form-control mr-5 mb-5" style="width: 250px" value="${model}">`)
-            })
+            
+            if(data.length > 0) {
+                data.forEach( model => {
+                    modelsDiv.append(`<input readonly type="text" class="form-control mr-5 mb-5" style="width: 250px" value="${model}">`)
+                })
+            } else modelsDiv.append(`<h6 class="mt-5">No models found for selected year <br> Please choose a different year</h6>`)
         })
         .catch( error => {
             console.error(error)
@@ -33,6 +43,7 @@ const init = () => {
     $('#year').mask('0000')
     document.getElementById('search').addEventListener('click', getModels)
     document.getElementById('year').addEventListener('keyup', removeInvalidClass)
+    document.getElementById('model_form').addEventListener('submit', ev => ev.preventDefault())
 }
 
 document.addEventListener('DOMContentLoaded', init)

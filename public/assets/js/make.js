@@ -51,7 +51,7 @@ const AjaxTable = function() {
             columns: [{
                 field: 'Make_ID',
                 title: '#',
-                // width: 40,
+                width: 60,
                 type: 'number',
                 selector: false,
                 textAlign: 'center',
@@ -60,7 +60,7 @@ const AjaxTable = function() {
                 title: 'make',
                 template: function(row) {
                     return `\
-                        <a href="/makes/${row.Make_Name}" class="text-dark">${row.Make_Name}</a>\
+                        <a href="/makes/${row.Make_Name}">${row.Make_Name}</a>\
                     `
                 }
             }, {
