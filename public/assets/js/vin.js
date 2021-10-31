@@ -1,15 +1,26 @@
 'use strict'
 
+const validateSearchQuery = query => {
+    if(query.length !== 17) {
+        $('#search-error').text('A valid VIN number consists of 17 characters.')
+        return false
+    }
+    $('#search-error').text('')
+    return true
+}
+
 const searchVIN = e => {
     const searchQuery = document.getElementById('query').value
-    if(searchQuery.length !== 17) return
+    const validSearch = validateSearchQuery(searchQuery)
+    if(!validSearch) return
     
     const vin = searchQuery
-
+    console.log(vin)
     $('#spinner').removeClass('d-none')
     fetch(`/api/vin/${vin}`)
         .then( response => response.json())
         .then( data => {
+            console.log(data)
             $('#vehicle-information').removeClass('d-none')
             $('#year').val(data.year)
             $('#make').val(data.make)
